@@ -1,0 +1,27 @@
+{
+    "prep": {
+	"code": "samples/prep_cars.py",
+	"parameters": {
+	    "test_size": {"min": 0.05, "max": 0.95, "inc": 0.05}
+	}
+    },
+    "model": {
+	"code": "samples/model_cars.py",
+	"parameters": {
+	    "epochs": {"min": 1, "max": 20, "inc": 1},
+	    "nblayers": {"min": 1, "max": 3, "inc": 1}
+	}
+    },
+    "post": {
+	"code": "samples/post_cars.py",
+	"parameters": {
+	    "fake": {"min": 1, "max": 1, "inc": 1}
+	}
+    },
+    "eval": {
+	"r2": "r2_score(y_test,y_pred)",
+	"evs": "explained_variance_score(y_test,y_pred)",
+	"mae": "mean_absolute_error(y_test,y_pred)",
+	"time": "model_time"
+    }
+}
