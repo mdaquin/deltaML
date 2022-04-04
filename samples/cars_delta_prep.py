@@ -7,12 +7,12 @@ from keras.layers import Dense
 import time
 
 # uncomment the line for the data of the brand of car to use
-df = pd.read_csv("https://mdaquin.github.io/d/cars/toyota.csv") # 93.5%
+# df = pd.read_csv("https://mdaquin.github.io/d/cars/toyota.csv") # 93.5%
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/audi.csv") # 89.5%
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/bmw.csv") # 90%
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/ford.csv") # 87%
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/merc.csv") # 91.5%
-# df = pd.read_csv("vauxhall.csv") # 82%
+df = pd.read_csv("https://mdaquin.github.io/d/cars/vauxhall.csv") # 82
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/vw.csv") # 91%
 
 
