@@ -1,5 +1,0 @@
-t1 = time.time()
-
-
-
-model_time = time.time() - t1

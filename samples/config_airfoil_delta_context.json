@@ -1,0 +1,28 @@
+{
+    "prep": {
+	"code": "samples/prep_airfoil_delta_context.py",
+	"parameters": {
+	    "test_size": {"min": 0.05, "max": 0.95, "inc": 0.05},
+	    "nbnn_train": {"min": 1, "max": 5, "inc": 1}	    
+	}
+    },
+    "model": {
+	"code": "samples/model_airfoil_delta.py",
+	"parameters": {
+	    "epochs": {"min": 2, "max": 400, "inc": 10}
+	}
+    },
+    "post": {
+	"code": "samples/post_airfoil_delta.py",
+	"parameters": {
+	    "nbnn_test": {"min": 1, "max": 10, "inc": 1}	    	    
+	}
+    },
+    "eval": {
+	"r2": "r2_score(y_test,y_pred)",
+	"evs": "explained_variance_score(y_test,y_pred)",
+	"mae": "mean_absolute_error(y_test,y_pred)",
+	"mse": "mean_squared_error(y_test,y_pred)",	
+	"time": "model_time"
+    }
+}

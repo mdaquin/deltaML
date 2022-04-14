@@ -16,8 +16,8 @@ class DiffLearning:
         nbrs = NearestNeighbors(n_neighbors=self.n+1, algorithm='ball_tree').fit(self.X_train)
         distances, indices = nbrs.kneighbors(self.X_train)
       else: 
-         for v in range(len(X_train)):
-            nv = np.random.randint(len(X_train), size=(1,self.n))
+         for v in range(len(self.X_train)):
+            nv = np.random.randint(len(self.X_train), size=(1,self.n))
             indices.append([v]+list(nv.flatten()))
       lddf = []
       lddr = []
@@ -40,7 +40,7 @@ class DiffLearning:
         distances, indices = nbrs.kneighbors(X_test)
       else: 
          for v in range(len(X_test)):
-            nv = np.random.randint(len(X_train), size=(1,neighbors))
+            nv = np.random.randint(len(self.X_train), size=(1,neighbors))
             indices.append(list(nv.flatten()))
       fdiffs = []
       rtrain = []
