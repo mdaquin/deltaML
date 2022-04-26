@@ -58,7 +58,7 @@ class DiffLearning:
       y_pred_d = model.predict(X_test_d)
       if len(y_train_source.shape) == 1:
         y_pred_d = y_pred_d.flatten()
-      y_pred_r = y_train_source - y_pred_d
+      y_pred_r = y_train_source + y_pred_d
       block_s = (neighbors,)
       if len(y_pred_r.shape) == 2:
         block_s = (neighbors,1)

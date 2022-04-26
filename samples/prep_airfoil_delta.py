@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score, explained_variance_score
 from sklearn.metrics import r2_score, explained_variance_score, mean_absolute_error, mean_squared_error
 import time
 
-df = pd.read_csv("https://mdaquin.github.io/d/AirfoilSelfNoise.csv")
+df = pd.read_csv("data/AirfoilSelfNoise.csv")
 
 df_s = df.copy()
 for k in df:
@@ -19,7 +19,7 @@ y = df_s.SSPL
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=P["test_size"], random_state=1)
 
 n = P["nbnn_train"]
-dl = DiffLearning(X_train, y_train, neighbors=n, selection="random")
+dl = DiffLearning(X_train, y_train, neighbors=n, context=False)
 X_train_d, y_train_d = dl.diffDataset()
 
 

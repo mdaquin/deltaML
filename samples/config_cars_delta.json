@@ -16,7 +16,7 @@
     "post": {
 	"code": "samples/post_cars_delta.py",
 	"parameters": {
-	    "nbnn_test": {"min": 1, "max": 10, "inc": 1}	    
+	    "nbnn_test": {"min": 1, "max": 5, "inc": 1}	    
 	}	
     },
     "eval": {

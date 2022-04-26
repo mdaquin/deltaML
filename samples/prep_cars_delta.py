@@ -8,7 +8,7 @@ from deltaml import DiffLearning
 import time
 
 # uncomment the line for the data of the brand of car to use
-df = pd.read_csv("https://mdaquin.github.io/d/cars/toyota.csv") # 93.5%
+df = pd.read_csv("data/toyota.csv") # 93.5%
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/audi.csv") # 89.5%
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/bmw.csv") # 90%
 # df = pd.read_csv("https://mdaquin.github.io/d/cars/ford.csv") # 87%
@@ -44,5 +44,5 @@ from sklearn.neighbors import NearestNeighbors
 
 #parameter : nbnn_train - number of nearest neighbours used in training 
 n = P["nbnn_train"]
-dl = DiffLearning(X_train, y_train, neighbors=n, context=True)
+dl = DiffLearning(X_train, y_train, neighbors=n, context=False)
 X_train_d, y_train_d = dl.diffDataset()

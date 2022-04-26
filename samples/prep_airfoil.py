@@ -5,7 +5,7 @@ from sklearn.metrics import r2_score, explained_variance_score
 from sklearn.metrics import r2_score, explained_variance_score, mean_absolute_error, mean_squared_error
 import time
 
-df = pd.read_csv("https://mdaquin.github.io/d/AirfoilSelfNoise.csv")
+df = pd.read_csv("data/AirfoilSelfNoise.csv")
 
 df_s = df.copy()
 for k in df:
