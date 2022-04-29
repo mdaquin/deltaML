@@ -19,7 +19,7 @@ y = df_s.SSPL
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=P["test_size"], random_state=1)
 
 n = P["nbnn_train"]
-dl = DiffLearning(X_train, y_train, neighbors=n, context=False)
+dl = DiffLearning(X_train, y_train, neighbors=n, context=True)
 X_train_d, y_train_d = dl.diffDataset()
 
 

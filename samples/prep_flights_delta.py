@@ -12,7 +12,7 @@ from deltaml import DiffLearning
 
 # https://www.kaggle.com/datasets/shubhambathwal/flight-price-prediction?select=economy.csv
 # df = pd.read_csv("https://mdaquin.github.io/d/flights/economy.csv")
-df = pd.read_csv("https://mdaquin.github.io/d/flights/business.csv")
+df = pd.read_csv("data/business.csv")
 
 df = df.sample(15000, random_state = 1)
 
